@@ -93,6 +93,13 @@ public class DBPostgreSQL {
         return dictFull;
     }
 
+    public OrderedDict getRowById(int id) {
+        Session session = sessionfactory.openSession();
+        OrderedDict orderedDict = (OrderedDict) session.get(OrderedDict.class, id);
+        session.close();
+        return orderedDict;
+    }
+
     public void setDictFull(ArrayList<OrderedDict> dictFull) {
         this.dictFull = dictFull;
     }

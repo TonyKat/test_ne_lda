@@ -5,7 +5,7 @@ import org.hibernate.annotations.Type;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "dictionary_news_rbc")
+@Table(name = "dictionary_new2")
 public class OrderedDict {
     @Id
     @Column(name = "id", columnDefinition = "integer")
@@ -17,6 +17,12 @@ public class OrderedDict {
     @Column(name = "word", columnDefinition = "text")
     @Type(type = "string")
     private String word;
+
+
+    @Column(name = "type_ne", columnDefinition = "integer")
+    @Type(type = "integer")
+    private int type_ne;
+
 
     public long getId() {
         return id;
@@ -33,4 +39,8 @@ public class OrderedDict {
     public void setWord(String word) {
         this.word = word;
     }
+
+    public int getType_ne() { return type_ne; }
+
+    public void setType_ne(int type_ne) { this.type_ne = type_ne; }
 }

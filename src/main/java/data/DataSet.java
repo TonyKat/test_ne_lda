@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "dataset_new")
+@Table(name = "dataset_new2")
 @TypeDefs({
         @TypeDef(
                 name = "string-array",
@@ -50,7 +50,7 @@ public class DataSet implements Serializable {
 
     @Column(name = "type_ne", columnDefinition = "integer")
     @Type(type = "integer")
-    private int type_ne;
+    private int typeNe;
 
     public DataSet() {}
 
@@ -86,13 +86,6 @@ public class DataSet implements Serializable {
         this.topicID = topicID;
     }*/
 
-    public int getType_ne() {
-        return type_ne;
-    }
-
-    public void setType_ne(int type_ne) {
-        this.type_ne = type_ne;
-    }
 
     public long getId() {
         return id;
@@ -100,5 +93,13 @@ public class DataSet implements Serializable {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public int getTypeNe() {
+        return typeNe;
+    }
+
+    public void setTypeNe(int typeNe) {
+        this.typeNe = typeNe;
     }
 }

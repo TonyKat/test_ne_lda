@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "result_table")
+@Table(name = "result_table_4")
 public class ResultTable implements Serializable {
     private static final long serialVersionUID = -870668971426132798L;
 
